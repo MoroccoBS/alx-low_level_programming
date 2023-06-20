@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
- * main - Print Putchar
+ * main - Priting Putchar
  *
  * Return: Always (0) success 
  */
