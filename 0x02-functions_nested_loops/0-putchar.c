@@ -1,12 +1,11 @@
-#include<stdio.h>
 #include "main.h"
 /**
- * main - Print Putchar
+ * main - Print _putchar
  *
  * Return: Always (0) success
  */
 int main(void)
 {
-	custom_putchar('A');
+	_putchar('A');
 	return(0);
 }
