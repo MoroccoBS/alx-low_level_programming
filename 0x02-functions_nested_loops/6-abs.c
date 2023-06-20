@@ -1,13 +1,14 @@
 #include "main.h"
 /**
  * int_abs - computes the absolute value of an integer
- * @: integer to be checked
+ * @val: integer to be checked
  * Return: int
  */
-int int_abs(int)
+int int_abs(int val)
 {
-	if (int >= 0)
-		return (int);
+	if (val >= 0)
+		return (val);
 	else 
-		return (int * -1);
+		return (val * -1);
+	return (0);
 }
