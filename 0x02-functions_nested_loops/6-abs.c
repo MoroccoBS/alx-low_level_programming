@@ -4,7 +4,7 @@
  * @val: integer to be checked
  * Return: int
  */
-int int_abs(int val)
+int _abs(int val)
 {
 	if (val >= 0)
 		return (val);
