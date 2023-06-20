@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 #include "main.h"
 /**
  * main - Print Putchar
@@ -7,11 +7,10 @@
  */
 int main(void)
 {
-    custom_putchar('A');
-    return(0);
+	custom_putchar('A');
+	return(0);
 }
-
 int custom_putchar(char c)
 {
-    return(putchar(c));
+	return(putchar(c));
 }
