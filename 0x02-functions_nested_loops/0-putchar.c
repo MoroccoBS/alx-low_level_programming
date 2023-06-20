@@ -10,7 +10,3 @@ int main(void)
 	custom_putchar('A');
 	return(0);
 }
-int custom_putchar(char c)
-{
-	return(putchar(c));
-}
