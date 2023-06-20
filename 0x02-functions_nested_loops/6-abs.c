@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * int_abs - computes the absolute value of an integer
+ * _abs - computes the absolute value of an integer
  * @val: integer to be checked
  * Return: int
  */
@@ -8,7 +8,7 @@ int _abs(int val)
 {
 	if (val >= 0)
 		return (val);
-	else 
+	else
 		return (val * -1);
 	return (0);
 }
