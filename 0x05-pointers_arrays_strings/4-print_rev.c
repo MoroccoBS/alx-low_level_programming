@@ -15,7 +15,7 @@ void print_rev(char *s)
 		s++;
 	}
 
-	int *i = s + len - 1;
+	char *i = s + len - 1;
 	while (i >= s)
 	{
 		printf("%c", *i);
