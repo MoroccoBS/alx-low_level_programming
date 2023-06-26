@@ -7,6 +7,7 @@
 void print_rev(char *s)
 {
 	int len;
+	char *i = s + len - 1;
 
 	len = 0;
 	while (*s != '\0')
@@ -14,8 +15,6 @@ void print_rev(char *s)
 		len++;
 		s++;
 	}
-
-	char *i = s + len - 1;
 	while (i >= s)
 	{
 		printf("%c", *i);
