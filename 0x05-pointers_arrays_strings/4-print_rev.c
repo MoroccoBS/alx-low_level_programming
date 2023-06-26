@@ -7,17 +7,18 @@
 void print_rev(char *s)
 {
 	int len = 0;
-	char *i = s + len - 1;
+	int i;
 
 	while (*s != '\0')
 	{
 		len++;
 		s++;
 	}
-	while (i >= s)
+	s--;
+	for (i = len; i > 0; i--)
 	{
-		printf("%c", *i);
-		i--;
+		putchar(*s);
+		s--;
 	}
-	printf("\n");
+	putchar('\n');
 }
