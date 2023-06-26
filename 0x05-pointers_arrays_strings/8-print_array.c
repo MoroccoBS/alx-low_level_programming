@@ -7,10 +7,13 @@
  */
 void print_array(int *a, int n)
 {
-	if (n > 0) {
+	int i = 0;
+    if (n > 0) {
         printf("%d", a[0]);
-        for (int i = 1; i < n; i++) {
+        i++;
+        while (i < n) {
             printf(", %d", a[i]);
+            i++;
         }
     }
 	printf("\n");
