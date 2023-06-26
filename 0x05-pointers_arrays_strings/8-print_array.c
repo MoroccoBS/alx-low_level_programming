@@ -8,15 +8,15 @@
 void print_array(int *a, int n)
 {
 	int len = 0;
-	int i = 0;
+	n = 0;
 
 	while (a[len] != '\0')
 	{
 		len++;
 	}
-	while (i < len)
+	while (n < len)
 	{
-		print("%d, ", a[i]);
-		i++;
+		printf("%d, ", a[n]);
+		n++;
 	}
-	print("\n");
+	printf("\n");
