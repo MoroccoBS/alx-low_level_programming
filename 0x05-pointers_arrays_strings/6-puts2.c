@@ -8,7 +8,7 @@ void puts2(char *str)
 {
 	int i = 0;
 
-	while (str[i] != '\0' && str[i] != '\n' && str[i] != ' \0H')
+	while (str[i] != '\0' && str[i] != '\n')
 	{
 		putchar(str[i]);
 		i += 2;
