@@ -8,13 +8,15 @@
 void print_array(int *a, int n)
 {
 	int len = 0;
+	int i = 0;
 
 	while (a[len] != '\0')
 	{
 		len++;
 	}
-	for (int i = 0; i < len; i++)
+	while (i < len)
 	{
 		print("%d, ", a[i]);
+		i++;
 	}
 	print("\n");
