@@ -19,5 +19,5 @@ void print_rev(char *s)
 		printf("%c", *i);
 		i--;
 	}
-	printf("n");
+	printf("\n");
 }
