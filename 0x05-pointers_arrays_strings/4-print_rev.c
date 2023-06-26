@@ -15,8 +15,11 @@ void print_rev(char *s)
 		s++;
 	}
 
-	for (int i = len - 1; i >= 0; i--)
+	int *i = s + len - 1;
+	while (i >= s)
 	{
-		printf("%d\n", s[i]);
+		printf("%c", *i);
+		i--;
 	}
+	printf("n");
 }
