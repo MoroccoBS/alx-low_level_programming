@@ -10,7 +10,6 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int len = 0;
 	int j = 0;
-	int i = 0;
 
 	while (dest[len] != '\0')
 	{
@@ -18,12 +17,13 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	while (src[j] != '\0' && j < n)
 	{
-		dest[len] = src[j];
+		dest[len + j] = src[j];
+		j++;
 	}
-	while (dest[i] < n)
+	while (len + j < n)
 	{
-		dest[i] = '\0';
-		i++;
+		dest[len + j] = '\0';
+		j++;
 	}
 	return (dest);
 	putchar('\n');
