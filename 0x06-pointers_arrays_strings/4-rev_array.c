@@ -2,7 +2,7 @@
 /**
  * reverse_array - a function that reverses the content of an array of integers
  * @a: Array to reversed
- * @n: number of elemnts of the array
+ * @n: number of elements of the array
  * Return: void
  */
 void reverse_array(int *a, int n)
@@ -20,5 +20,5 @@ void reverse_array(int *a, int n)
 	{
 		printf("%d, ", a[i]);
 	}
-	printf('\n');
+	printf("\n");
 }
