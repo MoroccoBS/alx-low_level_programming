@@ -12,10 +12,7 @@ char *leet(char *str)
 	char *encoded;
 
 	encoded = malloc(strlen(str) + 1);
-	if (encoded == NULL)
-	{
-		return (NULL);
-	}
+	return (encoded == NULL) ? NULL : encoded;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		encoded[i] = str[i];
