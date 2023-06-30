@@ -2,7 +2,7 @@
 /**
  * cap_string - capitalizes all words of a string
  * @str: string to be capitalizes
- * Return: String Modified
+ * Return: void
  */
 char *cap_string(char *str)
 {
@@ -27,5 +27,5 @@ char *cap_string(char *str)
 			}
 		}
 	}
-	return (str);
+	printf("c", str);
 }
