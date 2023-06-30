@@ -10,8 +10,6 @@ char *leet(char *str)
 	char letters[] = "aAeEoOtTlL";
 	char replacement[] = "4433007711";
 
-	// encoded = malloc(strlen(str) + 1);
-	// return (encoded == NULL) ? NULL : encoded;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (j = 0; j < 0; j++)
