@@ -27,5 +27,5 @@ char *cap_string(char *str)
 			}
 		}
 	}
-	printf("c", str);
+	printf("%c", str);
 }
