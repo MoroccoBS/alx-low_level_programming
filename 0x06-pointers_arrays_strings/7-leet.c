@@ -11,8 +11,8 @@ char *leet(char *str)
 	char *replacement = "4433007711";
 	char *encoded;
 
-	encoded = malloc(strlen(str) + 1);
-	return (encoded == NULL) ? NULL : encoded;
+	// encoded = malloc(strlen(str) + 1);
+	// return (encoded == NULL) ? NULL : encoded;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		encoded[i] = str[i];
