@@ -7,9 +7,15 @@
 char *leet(char *str)
 {
 	int i, j;
-	char* letters = "aAeEoOtTlL";
-	char* replacment = "4433007711";
-	char* encoded; 
+	char *letters = "aAeEoOtTlL";
+	char *replacement = "4433007711";
+	char *encoded;
+
+	encoded = malloc(strlen(str) + 1);
+	if (encoded == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		encoded[i] = str[i];
@@ -17,10 +23,11 @@ char *leet(char *str)
 		{
 			if (str[i] == letters[j])
 			{
-				encoded[i] = replacment[j];
+				encoded[i] = replacement[j];
 				break;
 			}
 		}
 	}
+	encoded[i] = '\0';
 	return (encoded);
 }
