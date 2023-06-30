@@ -8,7 +8,7 @@ char *rot13(char *str)
 {
     int i, j;
     char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+    char dataRot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
     for (i = 0; str[i] != '\0'; i++)
     {
@@ -16,7 +16,7 @@ char *rot13(char *str)
         {
             if (str[i] == data1[j])
             {
-                str[i] = datarot[j];
+                str[i] = dataRot[j];
             }
         }
     }
