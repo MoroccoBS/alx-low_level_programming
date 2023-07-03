@@ -6,12 +6,33 @@
  */
 char *_strchr(char *s, char c)
 {
-    for (int i = 0; s[i] >= '\0'; i++)
+    int len = 0;
+    int i, n;
+    char *j = NULL;
+
+    while (s[len] != '\0')
+    {
+        len++;
+    }
+    for (i = 0; i < len; i++)
     {
         if (s[i] == c)
         {
-            return (&s[i]);
+            n = i;
+            j = &s[n];
+            break;
         }
     }
-    return (0);
+    if (j != NULL)
+    {
+        if (len - n >= 3)
+        {
+            return (j);
+        }
+        else
+        {
+            return (NULL);
+        }
+    }
+    return (NULL);
 }
