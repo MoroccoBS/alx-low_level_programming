@@ -4,20 +4,24 @@
  * @s: string
  * Return: void
  */
+int is_palindrome_helper(char *start, char *end)
+{
+	if (start >= end)
+	{
+		return (1);
+	}
+
+	if (*start != *end)
+	{
+		return (0);
+	}
+
+	return (is_palindrome_helper(start + 1, end - 1));
+}
+
 int is_palindrome(char *s)
 {
-	int i, j;
-	int len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	for (i = 0, j = len - 1; i < len; i++, j--)
-	{
-		if (s[i] != s[j])
-		{
-			return (0);
-		}
-	}
-	return (1);
+	int len = strlen(s);
+
+	return (is_palindrome_helper(s, s + len - 1));
 }
