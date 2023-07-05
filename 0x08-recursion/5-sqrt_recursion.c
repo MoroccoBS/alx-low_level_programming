@@ -21,9 +21,10 @@ int _sqrt_recursion(int n)
     return _sqrt_recursive_helper(n, 1, n);
 }
 /**
- * _sqrt_recursion - a function that returns the natural square root of a number
+ * _sqrt_recursion_helper - a function that returns the natural square root of a number
  * @start: Number
  * @end: Number
+ * @n: Number
  * Return: int
  * */
 int _sqrt_recursive_helper(int n, int start, int end)
