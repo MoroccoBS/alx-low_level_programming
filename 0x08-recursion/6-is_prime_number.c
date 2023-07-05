@@ -6,18 +6,36 @@
  */
 int is_prime_number(int n)
 {
-	int i;
+	int divisor = 5;
+	int increment = 2;
 
 	if (n <= 1)
 	{
 		return (0);
 	}
-	for (i = 2; i * i<= n; i++)
+	if (n == 2 || n == 3)
 	{
-		if (n % i == 0)
-		{
-			return (0);
-		}
+		return (1);
+	}
+	if (n % 2 == 0 || n % 3 == 0)
+	{
+		return (0);
+	}
+	if (n % divisor == 0)
+	{
+		return (0);
+	}
+	divisor += increment;
+	increment = 6 - increment;
+	if (n % divisor == 0)
+	{
+		return (0);
+	}
+	divisor += increment;
+	increment = 6 - increment;
+	if (n % divisor == 0)
+	{
+		return (0);
 	}
 	return (1);
 }
