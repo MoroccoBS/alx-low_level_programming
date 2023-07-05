@@ -12,7 +12,6 @@ int factorial(int n)
 	}
 	else if (n == 0)
 	{
-		putchar(1 + '0');
 		return (1);
 	}
 	return (n * factorial(n - 1));
