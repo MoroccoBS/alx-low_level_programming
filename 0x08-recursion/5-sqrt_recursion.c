@@ -23,11 +23,13 @@ int _sqrt_recursion(int n)
 
 int _sqrt_recursive_helper(int n, int start, int end)
 {
+    int mid;
+
     if (start > end)
     {
         return -1;
     }
-    int mid = (start + end) / 2;
+    mid = (start + end) / 2;
     if (mid * mid == n)
     {
         return mid;
@@ -40,22 +42,4 @@ int _sqrt_recursive_helper(int n, int start, int end)
     {
         return _sqrt_recursive_helper(n, mid + 1, end);
     }
-}
-int main(void)
-{
-    int r;
-
-    r = _sqrt_recursion(1);
-    printf("%d\n", r);
-    r = _sqrt_recursion(1024);
-    printf("%d\n", r);
-    r = _sqrt_recursion(16);
-    printf("%d\n", r);
-    r = _sqrt_recursion(17);
-    printf("%d\n", r);
-    r = _sqrt_recursion(25);
-    printf("%d\n", r);
-    r = _sqrt_recursion(-1);
-    printf("%d\n", r);
-    return (0);
 }
