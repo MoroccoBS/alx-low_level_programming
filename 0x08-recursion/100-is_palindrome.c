@@ -1,7 +1,10 @@
 #include "main.h"
 /**
- * is_palindrome - a function that returns 1 if a string is a palindrome and 0 if not
+ * is_palindrome - a function that checks if a string is a palindrome
+ * is_palindrome_helper - helps the first function
  * @s: string
+ * @start: start
+ * @end: end
  * Return: void
  */
 int is_palindrome_helper(char *start, char *end)
