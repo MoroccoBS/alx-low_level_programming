@@ -3,10 +3,6 @@
  * is_palindrome - a function that checks if a string is a palindrome
  * @s: string
  * Return: void
- * is_palindrome_helper - helps the first function
- * @start: start
- * @end: end
- * Return: void
  */
 int is_palindrome_helper(char *start, char *end)
 {
@@ -22,6 +18,12 @@ int is_palindrome_helper(char *start, char *end)
 
 	return (is_palindrome_helper(start + 1, end - 1));
 }
+/**
+ * is_palindrome_helper - helps the first function
+ * @start: start
+ * @end: end
+ * Return: void
+ */
 int is_palindrome(char *s)
 {
 	int len = strlen(s);
