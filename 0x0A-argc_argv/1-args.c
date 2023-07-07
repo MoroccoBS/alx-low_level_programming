@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
  * main - Main function
  * @argc: number of command-line arguments passed
@@ -7,6 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
+	(void)argv;
 	printf("%d\n", argc - 1);
 	return (0);
 }
