@@ -2,7 +2,7 @@
 /**
  * main - Main function
  * @argc: number of command-line arguments passed
- * @arcgv: array of strings
+ * @argv: array of strings
  * Return: 0 success
  */
 int main(int argc, char *argv[])
