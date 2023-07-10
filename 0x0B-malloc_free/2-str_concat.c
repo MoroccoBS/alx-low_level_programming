@@ -13,7 +13,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 	{
-		return ("Hello");
+		return (NULL);
 	}
 	if (s1 != NULL)
 		while (s1[i] != '\0')
