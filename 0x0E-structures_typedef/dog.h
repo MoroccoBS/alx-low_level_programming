@@ -1,5 +1,6 @@
 #ifndef DOG_H
 #define DOG_H
+#include <stdio.h>
 /**
  * struct dog - sturct dog
  * @name: name
@@ -13,4 +14,3 @@ struct dog
 	char *owner;
 };
 #endif
-
