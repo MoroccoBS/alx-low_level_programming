@@ -5,24 +5,24 @@
  * @b: binary number
  * Return: unsigned int
  */
+
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int result = 0;
-	int len = strlen(b);
-	int i;
+	unsigned int dec = 0;
 
 	if (b == NULL)
-	{
 		return (0);
-	}
-	for (i = 0; i < len; i++)
+
+	while (*b)
 	{
-		if (b[i] == '1')
-			result = (result << 1) | 1;
-		else if (b[i] == '0')
-			result <<= 1;
+		if (*b == '1')
+			dec = (dec << 1) | 1;
+		else if (*b == '0')
+			dec <<= 1;
 		else
 			return (0);
+		b++;
 	}
-	return (result);
+
+	return (dec);
 }
