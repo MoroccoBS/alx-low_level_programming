@@ -2,6 +2,7 @@
 /**
  * flip_bits - flips bits in a given number
  * @n: number
+ * @m: number
  * Return: number
  */
 
