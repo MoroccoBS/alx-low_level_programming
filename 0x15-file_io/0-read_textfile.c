@@ -9,32 +9,28 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	if (filename == NULL)
+	int fd;
+	ssize_t nrd, nwr;
+	char *buf;
+
+	if (!filename)
 	{
-		return 0;
+		return (0);
 	}
 
-	FILE *file = fopen(filename, "r");
-	if (file == NULL)
+	fd = open(filename, O_RDONLY);
+	if (!fd)
 	{
-		return 0;
+		return (-1);
 	}
-
-	char buffer[letters];
-	ssize_t bytesRead = fread(buffer, sizeof(char), letters, file);
-	if (bytesRead <= 0)
+	buf = malloc(sizeof(char) * (letters));
+	if (!buf)
 	{
-		fclose(file);
-		return 0;
+		return (0);
 	}
-
-	ssize_t bytesWritten = fwrite(buffer, sizeof(char), bytesRead, stdout);
-	fclose(file);
-
-	if (bytesWritten != bytesRead)
-	{
-		return 0;
-	}
-
-	return bytesWritten;
+	nrd = read(fd, buf, letters);
+	nwr = write(STDOUT_FILENO, buf, nrd);
+	close(fd);
+	free(buf);
+	return (nwr);
 }
