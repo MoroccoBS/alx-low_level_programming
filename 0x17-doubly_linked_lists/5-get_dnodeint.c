@@ -10,11 +10,8 @@
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *temp;
-	unsigned int count;
-	dlistint_t *current;
-
-	count = 0;
-	current = head;
+	unsigned int count = 0;
+	dlistint_t *current = head;
 
 	if (head == NULL)
 	{
@@ -25,11 +22,11 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	{
 		if (count == index)
 		{
-			return (current);
+			return current;
 		}
 		current = current->next;
 		count++;
 	}
 
-	return (NULL);
+	return NULL;
 }
