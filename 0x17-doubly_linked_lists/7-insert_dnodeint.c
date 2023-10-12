@@ -2,7 +2,7 @@
 
 /**
  * insert_dnodeint_at_index - inserts a new node at a given position
- * @head: pointer to the head of the list
+ * @h: pointer to the head of the list
  * @idx: index of the list where the new node should be added
  * @n: integer
  * Return: the address of the new element, or NULL if it failed
@@ -18,7 +18,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		return (NULL);
 	}
-
 	if (idx == 0)
 	{
 		dlistint_t *new_node = malloc(sizeof(dlistint_t));
@@ -36,18 +35,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new_node;
 		return (new_node);
 	}
-
 	while (current != NULL && count < idx - 1)
 	{
 		current = current->next;
 		count++;
 	}
-
 	if (current == NULL)
 	{
 		return (NULL);
 	}
-
 	if (new_node == NULL)
 	{
 		return (NULL);
@@ -60,6 +56,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		current->next->prev = new_node;
 	}
 	current->next = new_node;
-
 	return (new_node);
 }
